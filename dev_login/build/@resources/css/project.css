@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* === import url("경로?t=ymdhi") === */
+@import url("../css/lib/reset.css");
+@import url("../css/_var.css");
+@import url("../css/_button.css");
+@import url("../css/_table.css");
+@import url("../css/_form.css");
+@import url("../css/_layout.css");
+@import url("../css/_global.css");
+
+/* CSS Start */
+
+@font-face {
+    font-family: 'yleeMortalHeartImmortalMemory';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/yleeMortalHeartImmortalMemory.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* sub login */
+.sub.login .page-content{ width: 100%; height: 100vh; display: flex;}
+.sub.login .box-area{ position: relative; color: var(--white); 
+    display: flex; align-items: center; justify-content: center;
+}
+.sub.login .box-area .text-wrap{text-align: center;}
+.sub.login .box-area .text-logo{font-size: 80px; font-family: 'yleeMortalHeartImmortalMemory'; font-weight: bold;}
+.sub.login .box-area .text{font-size: 12px;}
+
+.sub.login .box-area :is(.text-logo, .text) + .text{margin-top: 10px;}
+
+
+.sub.login .form-wrap{flex: 1; display: flex; align-items: center; justify-content: center; }
+.sub.login .form{ max-width: 340px; width: 100%; }
+.sub.login .form .title-wrap{text-align: center;}
+.sub.login .form .title-wrap .title{font-size: 40px; font-weight: bold;}
+.sub.login .form .title-wrap .text{font-size: 12px;}
+.sub.login .form .title-wrap .title + .text{margin-top: 4px;}
+
+.sub.login .form label{width: 100%;}
+.sub.login .form :is(.input, .btn){width: 100%;}
+.sub.login .form .btn.black{border-radius: 6px; font-weight: 600;}
+.sub.login .form .copy{font-size: 12px; text-align: center; }
+
+
+.sub.login fieldset{ display: flex; flex-direction: column; gap: 10px; }
+
+@media all and (min-width:1001px) {
+    .sub.login .page-content{  }
+    .sub.login .box-area{ width: 500px; border-radius: 0 100px 0 0; background-color: var(--black2);}
+    .sub.login .box-area::after,
+    .sub.login .box-area::before {content: ""; display: block; position: absolute;right: -100px;  width: 100px; height: 100px;}
+    .sub.login .box-area::after{bottom: 0; border-radius: 0 0 0 100px; background-color: white;}
+    .sub.login .box-area::before{bottom: 0; background-color: var(--black2);}
+
+    .sub.login .box-area .text-logo{font-size: 80px;}
+
+}
+@media all and (max-width: 1000px) {
+    .sub.login .page-content{ flex-direction: column; background-color: var(--black2);}
+    .sub.login .box-area{width: 100%; padding: 40px 0;}
+    .sub.login .box-area .text-logo{font-size: 65px;}
+
+    .sub.login .form-wrap{background-color: var(--white); border-radius: 40px 40px 0 0 ;}
+
+
+}
+
